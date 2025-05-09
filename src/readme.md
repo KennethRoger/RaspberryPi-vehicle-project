@@ -1,1 +1,0 @@
-*The source code is currently unavailable. If you really want to see the basic source code please do read from page 47 in `alkeak.pdf`*

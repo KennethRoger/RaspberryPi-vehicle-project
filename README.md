@@ -3,7 +3,7 @@ This project was developed during college by a group of amateurs, and as such, i
 
 Unfortunately, the original code has been lost and is no longer available. If I manage to recover it from an old backup (I vaguely remember storing it somewhere), I’ll update the repository.
 
-In the meantime, you can refer to the project report alkeak.pdf — the name is a mashup of our team initials. Check out page 47 for a one-page snapshot of the code. Do note: this isn't the final implementation (we later built an HTML-based remote control interface connected to Flask), but it’s fairly close in spirit.
+In the meantime, you can refer to the project report [alkeak.pdf](./alkeak.pdf) — the name is a mashup of our team initials. Check out page 47 for a one-page snapshot of the code. Do note: this isn't the final implementation (we later built an HTML-based remote control interface connected to Flask), but it’s fairly close in spirit.
 
 ---
 
@@ -44,10 +44,15 @@ A remote-controlled, web-based robotic vehicle built using **Raspberry Pi Zero 2
 - **Omnidirectional Movement:** Mecanum wheel integration allows sideway and diagonal motion.
 - **Wireless Operation:** SSH-controlled, headless setup without a display.
 
-_(Live Demo can be found inside assets/demo)_
-
 ## 📸 UI & Functionality
 
 ![Remote UI hosted locally](./assets/visuals/remote_control_screenshot.jpeg)
 
-More UI and testing can be found as video proofs inside `test_runs`
+### 🎥 Demo Videos (YouTube Shorts)
+- [GPIO signal input test](https://youtube.com/shorts/jVpSwBFa7yA)  
+- [Multi-direction motor test](https://youtube.com/shorts/kTXw2DsOj0Q)  
+- [Vehicle overview](https://youtube.com/shorts/OGs8hdUkN4c)  
+- [Vehicle running test](https://youtube.com/shorts/5wiNGcdAIT0)  
+- [Obstacle avoidance (Auto Mode)](https://youtube.com/shorts/7-tOotN-keU)
+
+---
