@@ -1,0 +1,50 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RC Car Remote</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+</head>
+<body>
+    <header class="details">
+        <p class="heading">ROVER</p>
+        <p class="mode">Manual</p>
+    </header>
+
+    <section id="screen">
+        <img src="{{ url_for('video_feed') }}" style ="width: 100%; height: 280px;">
+    </section>
+
+
+    <section id="rotation-controls">
+        <button id="rotateLeftButton" class="rotate disable" ontouchstart="rotatingLeft()" ontouchend="stopMovement()">&#10226;</button>
+        <button id="cameraButton" class="rotate disable" onclick="captureImage()"><img class='camera-icon' src="{{ url_for('static', filename='images/camera_icon.png') }}" alt="A"></button>
+        <button id="rotateRightButton" class="rotate disable" ontouchstart="rotatingRight()" ontouchend="stopMovement()">&#10227;</button>
+    </section>
+
+    <section id="direction-controls">
+        <button id="NWButton" class="controls disable" ontouchstart="nwMovement()" ontouchend="stopMovement()">&#8598;</button>
+        <button id="forwardButton" class="controls disable" ontouchstart="forwardMovement()" ontouchend="stopMovement()">&#8593;</button>
+        <button id="NEButton" class="controls disable" ontouchstart="neMovement()" ontouchend="stopMovement()">&#8599;</button>
+        <button id="leftButton" class="controls disable" ontouchstart="leftSideways()" ontouchend="stopMovement()">&#8592;</button>
+        <button id="autoModeButton" class="autoButton" onclick="toggleAutoMode()">A</button>
+        <button id="rightButton" class="controls disable" ontouchstart="rightSideways()" ontouchend="stopMovement()">&#8594;</button>
+        <button id="SWButton" class="controls disable" ontouchstart="swMovement()" ontouchend="stopMovement()">&#8601;</button>
+        <button id="backwardButton" class="controls disable" ontouchstart="backwardMovement()" ontouchend="stopMovement()">&#8595;</button>
+        <button id="SEButton" class="controls disable" ontouchstart="seMovement()" ontouchend="stopMovement()">&#8600;</button>
+    </section>
+
+    <script>
+        // To trigger cleanup before reloading the page
+        window.addEventListener('beforeunload', function(event) {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', '/cleanup', false);  // Synchronous request
+            xhr.send();
+        });
+    </script>
+    
+</body>
+</html>
